@@ -12,48 +12,52 @@ cd weather-api
 Install the dependencies:
 
 pip install -r requirements.txt
-
+```
 Next, create a .env file in the project root and add your OpenWeather API key:
-
+```bash
 OPENWEATHER_API_KEY=your_real_api_key_here
-
+```
 Once that’s done, start the server with:
-
+```bash
 uvicorn main:app --reload
-
-Your API will now be running locally at http://127.0.0.1:8000.
+```
+Your API will now be running locally at 
+```bash
+http://127.0.0.1:8000.
+```
 📡 How to Use
 
 The root endpoint simply shows that the API is running:
-
+```bash
 GET /
-
+```
 To fetch weather data for a city, use:
-
+```bash
 GET /weather/{city}
-
+```
 For example, to check Nairobi’s weather:
-
+```bash
 curl "http://127.0.0.1:8000/weather/Nairobi"
-
+```
 You’ll receive a response like this:
-
+```bash
 {
   "city": "Nairobi",
   "temperature": 22.5,
   "weather": "scattered clouds"
 }
-
+```
 📂 Project Layout
 
 The project is lightweight and organized as follows:
-
+```bash
 weather-api/
 │── main.py          # FastAPI app
 │── .env             # Environment variables
 │── requirements.txt # Dependencies
 │── README.md        # Project docs
 
+```
 🎬 Visual Demo
 <p align="center"> <img src="https://assets9.lottiefiles.com/private_files/lf30_editor_dcwkhmns.json" width="280" alt="Weather Animation"> </p>
 
